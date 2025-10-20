@@ -1,115 +1,97 @@
-  :root {
-    --bg-color: #121217;
-    --bg-gradient-start: #0e0e18;
-    --bg-gradient-end: #1a1a2e;
-    --text-primary: #e1e1e6;
-    --text-secondary: #a0a0b0;
-    --accent: #4fd1c5;
-    --accent-hover: #3ac5bd;
-    --shadow-light: rgba(79,209,197,0.3);
-    --shadow-glass: rgba(255 255 255 / 0.07);
-    --border-radius: 1rem;
-    --spacing-xl: 5rem;
-    --spacing-lg: 3rem;
-    --spacing-md: 1.75rem;
-    --spacing-sm: 1rem;
-    --max-width: 1200px;
-    --transition-default: 0.35s cubic-bezier(0.4,0,0.2,1);
-  }
+/* === SEMUA CSS KAMU TETAP SAMA SEPERTI DI ATAS === */
 
-  /* Reset */
-  * {
-    box-sizing: border-box;
-  }
+/* === Tambahan CSS di bawah ini === */
 
-  body {
-    margin: 0;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-    color: var(--text-primary);
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-  }
+/* Tombol theme toggle */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--accent);
+}
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+  transform: scale(1.1);
+}
 
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color var(--transition-default);
-    outline-offset: 2px;
-  }
-  a:hover, a:focus-visible {
-    color: var(--accent-hover);
-    outline: 2px solid var(--accent-hover);
-    border-radius: var(--border-radius);
-    outline-offset: 4px;
-  }
+/* Form kontak */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
 
-  h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: 700;
-    color: var(--text-primary);
-    user-select: none;
-  }
-  h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    background: linear-gradient(90deg, var(--accent), #62d8d8);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow:
-       0 0 6px var(--accent),
-       0 0 8px #62d8d8cc;
-  }
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
-    text-align: center;
-    position: relative;
-  }
-  h2::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 12px var(--accent);
-  }
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--text-secondary);
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+}
 
-  p {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    max-width: 700px;
-  }
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
 
-  .container {
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
-  }
+.messages-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
 
-  /* Header / Nav */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 2000;
-    background: rgba(18,18,23, 0.85);
-    backdrop-filter: saturate(200%) blur(10px);
-    box-shadow: 0 0 14px var(--shadow-light);
-    border-bottom: 1px solid rgba(79,209,197,0.15);
-  }
+.messages-container li {
+  background: #1a1a1a;
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  color: #eee;
+}
 
-  nav {
+/* === Tema Terang === */
+:root[data-theme='light'] {
+  --bg-color: #fdfdfd;
+  --bg-gradient-start: #f7f7f9;
+  --bg-gradient-end: #ffffff;
+  --text-primary: #1b1b1f;
+  --text-secondary: #444;
+  --accent: #0077cc;
+  --accent-hover: #005fa3;
+  --shadow-light: rgba(0,0,0,0.1);
+}
+
+:root[data-theme='light'] body {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-primary);
+}
+
+:root[data-theme='light'] .project-card,
+:root[data-theme='light'] .skill {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+:root[data-theme='light'] .contact-form input,
+:root[data-theme='light'] .contact-form textarea {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+:root[data-theme='light'] .messages-container li {
+  background: #eaeaea;
+  color: #222;
+}
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
