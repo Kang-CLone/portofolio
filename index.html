@@ -3,191 +3,1001 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kang Clone</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet" />
+<title>Kang Clone - Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <link rel="stylesheet" href="porto.css">
 </head>
 <body>
+<!-- Background Elements -->
+<div class="matrix-bg"></div>
+<div class="grid-lines"></div>
+<div class="scan-line"></div>
+
+<!-- Terminal Window -->
+<div class="terminal-window">
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="terminal-title">kang-clone@portfolio:~</div>
+  </div>
+  <div class="terminal-content">
+    <div class="terminal-line">> Initializing portfolio system...</div>
+    <div class="terminal-line">> Loading hacker aesthetic...</div>
+    <div class="terminal-line">> Connecting to neural networks...</div>
+    <div class="terminal-line">> Welcome to Kang Clone's digital realm</div>
+    <div class="terminal-line blink">█</div>
+  </div>
+</div>
 
 <header role="banner">
   <nav class="container" aria-label="Navigasi utama">
-    <div class="logo" tabindex="0" aria-label="Logo Kang Clone">KANG CLONE</div>
+    <div class="logo" tabindex="0" aria-label="Logo Kang Clone">
+      <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
+      <span class="logo-cursor">_</span>
+    </div>
+    
     <div class="nav-links">
-      <a href="#beranda" tabindex="0">Beranda</a>
-      <a href="#tentang-saya" tabindex="0">Tentang Saya</a>
-      <a href="#proyek" tabindex="0">Proyek</a>
-      <a href="#kemampuan" tabindex="0">Kemampuan</a>
-      <a href="#kontak" tabindex="0">Kontak</a>
+      <a href="#beranda" tabindex="0" class="nav-link"><span class="nav-num">01.</span> Beranda</a>
+      <a href="#tentang-saya" tabindex="0" class="nav-link"><span class="nav-num">02.</span> Tentang</a>
+      <a href="#proyek" tabindex="0" class="nav-link"><span class="nav-num">03.</span> Proyek</a>
+      <a href="#kemampuan" tabindex="0" class="nav-link"><span class="nav-num">04.</span> Kemampuan</a>
+      <a href="#kontak" tabindex="0" class="nav-link"><span class="nav-num">05.</span> Kontak</a>
     </div>
 
     <!-- Tombol Dark/Light Mode -->
-    <button id="themeToggle" aria-label="Ubah tema" class="theme-toggle">🌙</button>
+    <button id="themeToggle" aria-label="Ubah tema" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
   </nav>
 </header>
 
 <main class="container" role="main" tabindex="-1">
 
   <section id="beranda" aria-label="Beranda">
-    <h1>Halo, I'M Clone</h1>
-    <p>Portofolio ini adalah Portofolio pribadi yang dikembangkan Menggunakan AI.</p>
-    <a href="#proyek" class="btn-primary" role="button" tabindex="0" aria-label="Lihat proyek saya">Lihat Proyek Saya</a>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">$ hello world</p>
+        <h1 class="hero-title">
+          <span class="hero-line">I'M <span class="accent-text">CLONE</span></span>
+          <span class="hero-subtitle">FULL-STACK DEVELOPER & TECH ENTHUSIAST</span>
+        </h1>
+        <p class="hero-desc">
+          Membangun solusi digital dengan pendekatan futuristik. 
+          Portofolio ini dikembangkan dengan kecerdasan AI dan estetika cyberpunk.
+        </p>
+        <div class="hero-actions">
+          <a href="#proyek" class="btn-primary glitch" role="button" tabindex="0" aria-label="Lihat proyek saya">
+            <span class="glitch-text">Lihat Proyek</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#kontak" class="btn-secondary" role="button" tabindex="0" aria-label="Hubungi saya">
+            <span>Hubungi Saya</span>
+            <i class="fas fa-terminal"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">Proyek Selesai</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Tahun Pengalaman</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="100">0</div>
+            <div class="stat-label">Ribuan Baris Kode</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="code-header">
+            <span>profile.js</span>
+            <div class="code-controls">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="code-content">
+            <pre><code class="javascript">const kangClone = {
+  name: "Kang Clone",
+  role: "Full-Stack Developer",
+  skills: ["JavaScript", "Python", "React", "Node.js"],
+  location: "Digital Realm",
+  status: "Coding 24/7",
+  quote: "Transform ideas into code"
+};
+
+function greet() {
+  console.log("Hello, I build digital solutions.");
+  return "Welcome to my portfolio!";
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="tentang-saya" aria-label="Tentang Saya">
-    <img src="kangclone.jpg" alt="Gambar Kang Clone" tabindex="0" />
-    <div class="about-text">
-      <h2>Tentang Saya</h2>
-      <p>Saya Kang Clone, developer full stack dengan semangat teknologi anak IT dan gaya ala teknologi futuristik yang unik. Menggabungkan estetika gelap dengan kecepatan dan inovasi dalam tiap proyek.</p>
-      <p>Siap menghadirkan solusi praktis dan elegan dengan teknologi terkini serta antarmuka yang memukau.</p>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="section-num">02.</span> Tentang Saya
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-image">
+        <div class="image-container">
+          <div class="image-frame">
+            <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Gambar Kang Clone" tabindex="0" />
+            <div class="image-overlay"></div>
+            <div class="image-grid"></div>
+          </div>
+          <div class="image-badge">
+            <div class="badge-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="badge-text">
+              <div class="badge-title">Always Coding</div>
+              <div class="badge-subtitle">24/7 Developer Mode</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3 class="about-subtitle">Mengubah Kode menjadi Solusi</h3>
+        <p class="about-desc">
+          Saya Kang Clone, developer full-stack dengan semangat teknologi anak IT dan gaya ala teknologi futuristik yang unik. 
+          Menggabungkan estetika gelap dengan kecepatan dan inovasi dalam tiap proyek.
+        </p>
+        <p class="about-desc">
+          Spesialis dalam membangun aplikasi web modern dengan fokus pada performa, keamanan, dan pengalaman pengguna. 
+          Siap menghadirkan solusi praktis dan elegan dengan teknologi terkini serta antarmuka yang memukau.
+        </p>
+        
+        <div class="about-info">
+          <div class="info-item">
+            <div class="info-label">
+              <i class="fas fa-laptop-code"></i>
+              <span>Spesialisasi</span>
+            </div>
+            <div class="info-value">Web Development, AI Integration</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Lokasi</span>
+            </div>
+            <div class="info-value">Digital Space, Indonesia</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Pendidikan</span>
+            </div>
+            <div class="info-value">Computer Science & Self-Taught</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <i class="fas fa-heart"></i>
+              <span>Hobi</span>
+            </div>
+            <div class="info-value">Ngopi, Ngoding, Ngelamun (3N)</div>
+          </div>
+        </div>
+        
+        <div class="about-quote">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="quote-text">
+            "Code is like humor. When you have to explain it, it's bad."
+            <div class="quote-author">- Cory House</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="proyek" aria-label="Proyek">
-    <h2>Proyek</h2>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="section-num">03.</span> Proyek Saya
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    
     <div class="projects-grid" role="list">
       <article class="project-card" role="listitem">
-        <h3>Sistem Manajemen Inventaris</h3>
-        <p>Aplikasi web real-time dengan dashboard interaktif dan laporan otomatis, memudahkan pengelolaan stok dan inventaris secara efisien.</p>
-        <a href="#">Lihat Detail</a>
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-boxes"></i>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" aria-label="Lihat detail proyek">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="#" class="project-link" aria-label="Lihat kode sumber">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Sistem Manajemen Inventaris</h3>
+        <p class="project-desc">
+          Aplikasi web real-time dengan dashboard interaktif dan laporan otomatis, 
+          memudahkan pengelolaan stok dan inventaris secara efisien.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">WebSocket</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-date">
+            <i class="far fa-calendar-alt"></i>
+            <span>Jan 2024</span>
+          </div>
+        </div>
       </article>
+      
       <article class="project-card" role="listitem">
-        <h3>Portal Belajar Online</h3>
-        <p>Platform edukasi interaktif dengan fitur kuiz, video, dan manajemen materi kursus untuk pembelajaran jarak jauh yang efektif.</p>
-        <a href="#">Lihat Detail</a>
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" aria-label="Lihat detail proyek">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="#" class="project-link" aria-label="Lihat kode sumber">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Portal Belajar Online</h3>
+        <p class="project-desc">
+          Platform edukasi interaktif dengan fitur kuiz, video, dan manajemen materi kursus 
+          untuk pembelajaran jarak jauh yang efektif.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Firebase</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-date">
+            <i class="far fa-calendar-alt"></i>
+            <span>Mar 2024</span>
+          </div>
+        </div>
       </article>
+      
       <article class="project-card" role="listitem">
-        <h3>Chatbot AI untuk Layanan Pelanggan</h3>
-        <p>Chatbot AI cerdas untuk menjawab pertanyaan pelanggan secara otomatis, meningkatkan efisiensi layanan dan kepuasan pengguna.</p>
-        <a href="#">Lihat Detail</a>
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" aria-label="Lihat detail proyek">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="#" class="project-link" aria-label="Lihat kode sumber">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Chatbot AI untuk Layanan Pelanggan</h3>
+        <p class="project-desc">
+          Chatbot AI cerdas untuk menjawab pertanyaan pelanggan secara otomatis, 
+          meningkatkan efisiensi layanan dan kepuasan pengguna.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-date">
+            <i class="far fa-calendar-alt"></i>
+            <span>Mei 2024</span>
+          </div>
+        </div>
       </article>
+      
+      <!-- Proyek tambahan dari link yang diberikan -->
+      <article class="project-card featured" role="listitem">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://kang-clone.github.io/webkami/" target="_blank" class="project-link" aria-label="Lihat proyek langsung">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="#" class="project-link" aria-label="Lihat kode sumber">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-badge">
+          <i class="fas fa-star"></i>
+          <span>Proyek Unggulan</span>
+        </div>
+        <h3 class="project-title">WebKami - Modern Agency Website</h3>
+        <p class="project-desc">
+          Website agency modern dengan animasi smooth, desain responsif, dan UI/UX yang menarik. 
+          Dibangun dengan pendekatan mobile-first dan performa tinggi.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">GSAP</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-date">
+            <i class="far fa-calendar-alt"></i>
+            <span>Jun 2024</span>
+          </div>
+          <a href="https://kang-clone.github.io/webkami/" target="_blank" class="project-visit">
+            Kunjungi Website
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <div class="projects-more">
+      <a href="#" class="btn-secondary">
+        <span>Lihat Semua Proyek</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
     </div>
   </section>
 
   <section id="kemampuan" aria-label="Kemampuan">
-    <h2>Kemampuan Tapi BOONG 😅</h2>
-    <div class="skills-grid" role="list">
-      <div class="skill" role="listitem">
-        <h4>JavaScript</h4>
-        <div class="progress-bar" aria-valuenow="90"><div class="progress-fill js-fill"></div></div>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="section-num">04.</span> Kemampuan & Teknologi
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skills-intro">
+        <h3 class="skills-subtitle">"Kemampuan Tapi BOONG 😅"</h3>
+        <p class="skills-desc">
+          Jangan terlalu serius dengan persentase di bawah ini. Yang penting adalah kemampuan 
+          untuk belajar dan beradaptasi dengan teknologi baru.
+        </p>
       </div>
-      <div class="skill" role="listitem">
-        <h4>Python</h4>
-        <div class="progress-bar" aria-valuenow="85"><div class="progress-fill py-fill"></div></div>
+      
+      <div class="skills-grid" role="list">
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">JavaScript</h4>
+            <div class="skill-percent" data-percent="90">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill js-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            ES6+, Async/Await, DOM Manipulation, APIs
+          </div>
+        </div>
+        
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">Python</h4>
+            <div class="skill-percent" data-percent="85">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill py-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            Django, Flask, Data Analysis, Automation
+          </div>
+        </div>
+        
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">React</h4>
+            <div class="skill-percent" data-percent="75">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill react-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            Hooks, Context API, Redux, React Router
+          </div>
+        </div>
+        
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">CSS</h4>
+            <div class="skill-percent" data-percent="80">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill css-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            Flexbox, Grid, Animations, Responsive Design
+          </div>
+        </div>
+        
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">Node.js</h4>
+            <div class="skill-percent" data-percent="70">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill node-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            Express, REST APIs, Authentication, WebSockets
+          </div>
+        </div>
+        
+        <div class="skill" role="listitem">
+          <div class="skill-header">
+            <h4 class="skill-title">AI/ML</h4>
+            <div class="skill-percent" data-percent="65">0%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill ai-fill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <div class="skill-desc">
+            TensorFlow, NLP, Computer Vision, Chatbots
+          </div>
+        </div>
       </div>
-      <div class="skill" role="listitem">
-        <h4>React</h4>
-        <div class="progress-bar" aria-valuenow="75"><div class="progress-fill react-fill"></div></div>
-      </div>
-      <div class="skill" role="listitem">
-        <h4>CSS</h4>
-        <div class="progress-bar" aria-valuenow="80"><div class="progress-fill css-fill"></div></div>
+      
+      <div class="skills-tech">
+        <h4 class="tech-title">Teknologi Lain yang Saya Gunakan</h4>
+        <div class="tech-tags">
+          <span class="tech-tag-sm">Git</span>
+          <span class="tech-tag-sm">Docker</span>
+          <span class="tech-tag-sm">MongoDB</span>
+          <span class="tech-tag-sm">PostgreSQL</span>
+          <span class="tech-tag-sm">Firebase</span>
+          <span class="tech-tag-sm">AWS</span>
+          <span class="tech-tag-sm">GraphQL</span>
+          <span class="tech-tag-sm">TypeScript</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="kontak" aria-label="Kontak">
-    <h2>Kontak</h2>
-    <p>Ingin bekerja sama atau punya pertanyaan? Jangan ragu hubungi saya lewat email di bawah ini.</p>
-    <p class="hobby">Hobi saya (3N): Ngopi, Ngoding, Ngelamun</p>
-
-    <a href="mailto:kangclone0101@gmail.com" class="btn-primary">kangclone0101@gmail.com</a>
-    <p style="margin-top: 1.5rem;">Atau pesan langsung ke WhatsApp saya:</p>
-    <a href="https://wa.me/6281342292569" target="_blank" rel="noopener" class="btn-primary">WhatsApp: 081342292569</a>
-
-    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--text-secondary);" />
-
-    <h3>Tinggalkan Pesan untuk Saya</h3>
-    <p>Silakan isi nama dan pesanmu di bawah ini, saya akan membaca setiap pesan yang masuk 😊</p>
-
-    <form id="messageForm" class="contact-form">
-      <label for="name">Nama:</label>
-      <input type="text" id="name" name="name" placeholder="Tulis nama kamu di sini..." required />
-
-      <label for="message">Pesan:</label>
-      <textarea id="message" name="message" placeholder="Tulis pesan kamu di sini..." required></textarea>
-
-      <button type="submit" class="btn-primary">Kirim Pesan</button>
-    </form>
-
-    <div id="messagesContainer" class="messages-container">
-      <h4>Pesan dari Pengunjung:</h4>
-      <ul id="messagesList"></ul>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="section-num">05.</span> Hubungi Saya
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3 class="contact-subtitle">Mari Berkolaborasi</h3>
+        <p class="contact-desc">
+          Ingin bekerja sama atau punya pertanyaan? Jangan ragu hubungi saya. 
+          Saya selalu terbuka untuk diskusi tentang proyek baru, peluang kolaborasi, 
+          atau sekadar ngobrol tentang teknologi.
+        </p>
+        
+        <div class="contact-methods">
+          <a href="mailto:kangclone0101@gmail.com" class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="method-details">
+              <div class="method-label">Email</div>
+              <div class="method-value">kangclone0101@gmail.com</div>
+            </div>
+          </a>
+          
+          <a href="https://wa.me/6281342292569" target="_blank" rel="noopener" class="contact-method">
+            <div class="method-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="method-details">
+              <div class="method-label">WhatsApp</div>
+              <div class="method-value">+62 813 4229 2569</div>
+            </div>
+          </a>
+          
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="method-details">
+              <div class="method-label">Lokasi</div>
+              <div class="method-value">Digital Space, Indonesia</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-hobby">
+          <h4>Hobi Saya (3N)</h4>
+          <div class="hobby-items">
+            <div class="hobby-item">
+              <i class="fas fa-coffee"></i>
+              <span>Ngopi</span>
+            </div>
+            <div class="hobby-item">
+              <i class="fas fa-code"></i>
+              <span>Ngoding</span>
+            </div>
+            <div class="hobby-item">
+              <i class="fas fa-cloud"></i>
+              <span>Ngelamun</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-social">
+          <h4>Temui Saya di</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <h3 class="form-title">Kirim Pesan Langsung</h3>
+        <p class="form-desc">
+          Silakan isi nama dan pesanmu di bawah ini, saya akan membaca setiap pesan yang masuk 😊
+        </p>
+        
+        <form id="messageForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <div class="input-container">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required />
+              <div class="input-underline"></div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-container">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" id="email" name="email" placeholder="Masukkan email kamu" required />
+              <div class="input-underline"></div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <div class="input-container">
+              <i class="fas fa-comment-alt input-icon"></i>
+              <textarea id="message" name="message" placeholder="Tulis pesan kamu di sini..." required></textarea>
+              <div class="input-underline"></div>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-primary glitch">
+            <span class="glitch-text">Kirim Pesan</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="messages-container">
+      <h4 class="messages-title">Pesan dari Pengunjung</h4>
+      <div class="messages-list" id="messagesList">
+        <!-- Pesan akan ditampilkan di sini -->
+        <div class="message-empty">
+          <i class="fas fa-inbox"></i>
+          <p>Belum ada pesan. Jadilah yang pertama!</p>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2024 Kang Clone. All rights reserved.
+  <div class="footer-content">
+    <div class="footer-logo">
+      <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
+    </div>
+    
+    <div class="footer-quote">
+      "Code never lies, comments sometimes do." - Ron Jeffries
+    </div>
+    
+    <div class="footer-links">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang-saya">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kemampuan">Kemampuan</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        &copy; 2024 Kang Clone. Dibangun dengan <i class="fas fa-heart"></i> dan <i class="fas fa-code"></i>.
+      </div>
+      <div class="footer-stats">
+        <span class="stat"><i class="fas fa-eye"></i> <span id="visitorCount">0</span> Pengunjung</span>
+        <span class="stat"><i class="fas fa-clock"></i> Terakhir update: <span id="lastUpdate">Hari ini</span></span>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- Terminal Toggle Button -->
+<button class="terminal-toggle" aria-label="Toggle terminal">
+  <i class="fas fa-terminal"></i>
+</button>
 
 <!-- Script -->
 <script>
-  // Progress bar animasi
+  // ==================== FUNGSI UMUM ====================
   document.addEventListener('DOMContentLoaded', () => {
-    const bars = [
-      { selector: '.js-fill', width: '90%' },
-      { selector: '.py-fill', width: '85%' },
-      { selector: '.react-fill', width: '75%' },
-      { selector: '.css-fill', width: '80%' }
-    ];
+    console.log('Portfolio Kang Clone loaded');
+    
+    // Simulasi pengunjung
+    const visitorCount = document.getElementById('visitorCount');
+    if (visitorCount) {
+      const randomVisitors = Math.floor(Math.random() * 500) + 100;
+      animateCounter(visitorCount, randomVisitors, 2000);
+    }
+    
+    // Animate counter untuk stats
+    function animateCounter(element, target, duration) {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 16);
+    }
+    
+    // Animate stat numbers in hero
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+      const target = parseInt(stat.getAttribute('data-count'));
+      animateCounter(stat, target, 1500);
+    });
+    
+    // Animate skill percentages
+    const skillPercents = document.querySelectorAll('.skill-percent');
+    skillPercents.forEach(skill => {
+      const target = parseInt(skill.getAttribute('data-percent'));
+      animateCounter(skill, target, 2000);
+    });
+    
+    // Progress bar animasi
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
+          const bars = [
+            { selector: '.js-fill', width: '90%' },
+            { selector: '.py-fill', width: '85%' },
+            { selector: '.react-fill', width: '75%' },
+            { selector: '.css-fill', width: '80%' },
+            { selector: '.node-fill', width: '70%' },
+            { selector: '.ai-fill', width: '65%' }
+          ];
+          
           bars.forEach(bar => {
             const el = document.querySelector(bar.selector);
-            if(el) el.style.width = bar.width;
+            if(el) {
+              setTimeout(() => {
+                el.style.width = bar.width;
+              }, 300);
+            }
           });
+          
           obs.disconnect();
         }
       });
-    }, {threshold: 0.6});
-    observer.observe(document.getElementById('kemampuan'));
-  });
-
-  // Fitur kirim pesan
-  document.addEventListener('DOMContentLoaded', () => {
+    }, {threshold: 0.5});
+    
+    const skillsSection = document.getElementById('kemampuan');
+    if (skillsSection) observer.observe(skillsSection);
+    
+    // ==================== FITUR KIRIM PESAN ====================
     const form = document.getElementById('messageForm');
     const messagesList = document.getElementById('messagesList');
     const saved = JSON.parse(localStorage.getItem('visitorMessages')) || [];
-
-    saved.forEach(msg => addMessage(msg.name, msg.text));
-
+    
+    // Load saved messages
+    if (saved.length > 0) {
+      messagesList.innerHTML = '';
+      saved.forEach(msg => addMessage(msg.name, msg.text, msg.email));
+    }
+    
     form.addEventListener('submit', e => {
       e.preventDefault();
       const name = form.name.value.trim();
+      const email = form.email.value.trim();
       const text = form.message.value.trim();
-      if(!name || !text) return alert('Harap isi nama dan pesan.');
-
-      addMessage(name, text);
-      saved.push({name, text});
+      
+      if(!name || !email || !text) {
+        showNotification('Harap isi semua field.', 'error');
+        return;
+      }
+      
+      if (!validateEmail(email)) {
+        showNotification('Format email tidak valid.', 'error');
+        return;
+      }
+      
+      addMessage(name, text, email);
+      saved.push({name, email, text, date: new Date().toLocaleDateString('id-ID')});
       localStorage.setItem('visitorMessages', JSON.stringify(saved));
+      
+      showNotification('Pesan berhasil dikirim!', 'success');
       form.reset();
     });
-
-    function addMessage(name, text){
-      const li = document.createElement('li');
-      li.innerHTML = `<strong>${name}:</strong> ${text}`;
-      messagesList.appendChild(li);
+    
+    function addMessage(name, text, email) {
+      if (messagesList.querySelector('.message-empty')) {
+        messagesList.innerHTML = '';
+      }
+      
+      const messageEl = document.createElement('div');
+      messageEl.className = 'message-item';
+      messageEl.innerHTML = `
+        <div class="message-header">
+          <div class="message-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="message-info">
+            <div class="message-name">${name}</div>
+            <div class="message-email">${email}</div>
+          </div>
+          <div class="message-date">Baru saja</div>
+        </div>
+        <div class="message-content">${text}</div>
+      `;
+      
+      messagesList.prepend(messageEl);
+    }
+    
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+    
+    function showNotification(message, type) {
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        <span>${message}</span>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.classList.add('show');
+      }, 10);
+      
+      setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+          }
+        }, 300);
+      }, 3000);
+    }
+    
+    // ==================== DARK/LIGHT MODE TOGGLE ====================
+    const toggleBtn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(currentTheme);
+    
+    toggleBtn.addEventListener('click', () => {
+      const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+      setTheme(theme);
+    });
+    
+    function setTheme(theme){
+      root.dataset.theme = theme;
+      const icon = toggleBtn.querySelector('i');
+      icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+      localStorage.setItem('theme', theme);
+    }
+    
+    // ==================== TERMINAL TOGGLE ====================
+    const terminalToggle = document.querySelector('.terminal-toggle');
+    const terminalWindow = document.querySelector('.terminal-window');
+    
+    if (terminalToggle && terminalWindow) {
+      terminalToggle.addEventListener('click', () => {
+        terminalWindow.classList.toggle('show');
+        terminalToggle.classList.toggle('active');
+      });
+    }
+    
+    // ==================== MENU MOBILE ====================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+      });
+    }
+    
+    // ==================== SCROLL ANIMATIONS ====================
+    // Animasi saat scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observerFade = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe elements untuk fade in
+    document.querySelectorAll('.project-card, .skill, .contact-method').forEach(el => {
+      observerFade.observe(el);
+    });
+    
+    // ==================== TYPING EFFECT ====================
+    // Simulasi efek typing di terminal
+    const terminalLines = document.querySelectorAll('.terminal-line');
+    if (terminalLines.length > 0) {
+      let lineIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let isEnd = false;
+      
+      function typeLine() {
+        const currentLine = terminalLines[lineIndex];
+        const text = currentLine.textContent.replace('█', '');
+        
+        if (!isDeleting && charIndex <= text.length) {
+          currentLine.textContent = text.substring(0, charIndex) + '█';
+          charIndex++;
+          setTimeout(typeLine, charIndex === text.length ? 1000 : 50);
+        } else if (!isDeleting && charIndex > text.length) {
+          if (lineIndex === terminalLines.length - 1) {
+            isEnd = true;
+            // Blinking cursor
+            setInterval(() => {
+              const cursor = currentLine.textContent.includes('█') 
+                ? currentLine.textContent.replace('█', '')
+                : currentLine.textContent + '█';
+              currentLine.textContent = cursor;
+            }, 500);
+            return;
+          }
+          isDeleting = true;
+          setTimeout(typeLine, 1000);
+        } else if (isDeleting && charIndex > 0) {
+          charIndex--;
+          currentLine.textContent = text.substring(0, charIndex) + '█';
+          setTimeout(typeLine, 30);
+        } else {
+          isDeleting = false;
+          lineIndex++;
+          setTimeout(typeLine, 500);
+        }
+      }
+      
+      // Start typing effect after page load
+      setTimeout(typeLine, 1000);
+    }
+    
+    // ==================== GLITCH EFFECT ====================
+    const glitchButtons = document.querySelectorAll('.glitch');
+    glitchButtons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.classList.add('glitch-active');
+        setTimeout(() => {
+          button.classList.remove('glitch-active');
+        }, 500);
+      });
+    });
+    
+    // ==================== BACKGROUND ANIMATIONS ====================
+    // Matrix rain effect
+    const matrixBg = document.querySelector('.matrix-bg');
+    if (matrixBg) {
+      const chars = "01";
+      const columns = Math.floor(window.innerWidth / 20);
+      
+      for (let i = 0; i < columns; i++) {
+        const column = document.createElement('div');
+        column.className = 'matrix-column';
+        column.style.left = `${i * 20}px`;
+        column.style.animationDelay = `${Math.random() * 5}s`;
+        matrixBg.appendChild(column);
+        
+        // Add random characters
+        const charCount = Math.floor(Math.random() * 15) + 10;
+        for (let j = 0; j < charCount; j++) {
+          const char = document.createElement('span');
+          char.textContent = chars[Math.floor(Math.random() * chars.length)];
+          char.style.animationDelay = `${Math.random() * 5}s`;
+          column.appendChild(char);
+        }
+      }
     }
   });
-
-  // Dark/Light Mode Toggle
-  const toggleBtn = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  setTheme(currentTheme);
-
-  toggleBtn.addEventListener('click', () => {
-    const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-    setTheme(theme);
+  
+  // ==================== SCROLL SMOOTH ====================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (navLinks && navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+          menuToggle.classList.remove('active');
+        }
+      }
+    });
   });
-
-  function setTheme(theme){
-    root.dataset.theme = theme;
-    toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
-    localStorage.setItem('theme', theme);
-  }
 </script>
 
 </body>
