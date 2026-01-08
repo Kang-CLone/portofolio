@@ -1,1004 +1,474 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kang Clone - Developer Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="porto.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kang Clone - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<!-- Background Elements -->
-<div class="matrix-bg"></div>
-<div class="grid-lines"></div>
-<div class="scan-line"></div>
-
-<!-- Terminal Window -->
-<div class="terminal-window">
-  <div class="terminal-header">
-    <div class="terminal-dots">
-      <span class="dot red"></span>
-      <span class="dot yellow"></span>
-      <span class="dot green"></span>
-    </div>
-    <div class="terminal-title">kang-clone@portfolio:~</div>
-  </div>
-  <div class="terminal-content">
-    <div class="terminal-line">> Initializing portfolio system...</div>
-    <div class="terminal-line">> Loading hacker aesthetic...</div>
-    <div class="terminal-line">> Connecting to neural networks...</div>
-    <div class="terminal-line">> Welcome to Kang Clone's digital realm</div>
-    <div class="terminal-line blink">█</div>
-  </div>
-</div>
-
-<header role="banner">
-  <nav class="container" aria-label="Navigasi utama">
-    <div class="logo" tabindex="0" aria-label="Logo Kang Clone">
-      <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
-      <span class="logo-cursor">_</span>
-    </div>
-    
-    <div class="nav-links">
-      <a href="#beranda" tabindex="0" class="nav-link"><span class="nav-num">01.</span> Beranda</a>
-      <a href="#tentang-saya" tabindex="0" class="nav-link"><span class="nav-num">02.</span> Tentang</a>
-      <a href="#proyek" tabindex="0" class="nav-link"><span class="nav-num">03.</span> Proyek</a>
-      <a href="#kemampuan" tabindex="0" class="nav-link"><span class="nav-num">04.</span> Kemampuan</a>
-      <a href="#kontak" tabindex="0" class="nav-link"><span class="nav-num">05.</span> Kontak</a>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="grid-lines"></div>
+        <div class="scan-line"></div>
+        <div class="floating-dots"></div>
     </div>
 
-    <!-- Tombol Dark/Light Mode -->
-    <button id="themeToggle" aria-label="Ubah tema" class="theme-toggle">
-      <i class="fas fa-moon"></i>
-    </button>
-    
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <div class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-  </nav>
-</header>
-
-<main class="container" role="main" tabindex="-1">
-
-  <section id="beranda" aria-label="Beranda">
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="hero-greeting">$ hello world</p>
-        <h1 class="hero-title">
-          <span class="hero-line">I'M <span class="accent-text">CLONE</span></span>
-          <span class="hero-subtitle">FULL-STACK DEVELOPER & TECH ENTHUSIAST</span>
-        </h1>
-        <p class="hero-desc">
-          Membangun solusi digital dengan pendekatan futuristik. 
-          Portofolio ini dikembangkan dengan kecerdasan AI dan estetika cyberpunk.
-        </p>
-        <div class="hero-actions">
-          <a href="#proyek" class="btn-primary glitch" role="button" tabindex="0" aria-label="Lihat proyek saya">
-            <span class="glitch-text">Lihat Proyek</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#kontak" class="btn-secondary" role="button" tabindex="0" aria-label="Hubungi saya">
-            <span>Hubungi Saya</span>
-            <i class="fas fa-terminal"></i>
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number" data-count="15">0</div>
-            <div class="stat-label">Proyek Selesai</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" data-count="3">0</div>
-            <div class="stat-label">Tahun Pengalaman</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" data-count="100">0</div>
-            <div class="stat-label">Ribuan Baris Kode</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="code-window">
-          <div class="code-header">
-            <span>profile.js</span>
-            <div class="code-controls">
-              <span></span>
-              <span></span>
-              <span></span>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
+                <span class="logo-cursor">_</span>
+            </a>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link"><span class="nav-num">01.</span> Home</a></li>
+                    <li><a href="#about" class="nav-link"><span class="nav-num">02.</span> About</a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nav-num">04.</span> Skills</a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nav-num">05.</span> Contact</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="code-content">
-            <pre><code class="javascript">const kangClone = {
+
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">Hi, my name is</p>
+                    <h1 class="hero-title">Kang Clone<span class="highlight">.</span></h1>
+                    <h2 class="hero-role">Full Stack Developer & AI Enthusiast</h2>
+                    <p class="hero-description">
+                        I build digital solutions with modern technologies, 
+                        focusing on performance, security, and exceptional user experiences.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="25">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-box">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">profile.js</span>
+                        </div>
+                        <div class="code-body">
+                            <pre><code>const developer = {
   name: "Kang Clone",
-  role: "Full-Stack Developer",
-  skills: ["JavaScript", "Python", "React", "Node.js"],
-  location: "Digital Realm",
-  status: "Coding 24/7",
-  quote: "Transform ideas into code"
+  role: "Full Stack Developer",
+  stack: ["JavaScript", "Python", "React", "Node.js"],
+  location: "Indonesia",
+  status: "Always coding",
+  motto: "Turning ideas into reality"
 };
 
-function greet() {
-  console.log("Hello, I build digital solutions.");
-  return "Welcome to my portfolio!";
+function buildProject(idea) {
+  const solution = transform(idea);
+  return deploy(solution);
 }</code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="tentang-saya" aria-label="Tentang Saya">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="section-num">02.</span> Tentang Saya
-      </h2>
-      <div class="section-line"></div>
-    </div>
-    
-    <div class="about-content">
-      <div class="about-image">
-        <div class="image-container">
-          <div class="image-frame">
-            <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Gambar Kang Clone" tabindex="0" />
-            <div class="image-overlay"></div>
-            <div class="image-grid"></div>
-          </div>
-          <div class="image-badge">
-            <div class="badge-icon">
-              <i class="fas fa-code"></i>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-num">02.</span> About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Kang Clone" class="profile-img">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Building Digital Solutions</h3>
+                        <p>
+                            I'm a passionate full-stack developer specializing in modern web technologies. 
+                            With a background in Computer Science and self-taught expertise, I create 
+                            efficient and scalable applications.
+                        </p>
+                        <p>
+                            My approach combines clean code with intuitive design, ensuring every 
+                            project not only works flawlessly but also provides an exceptional user experience.
+                        </p>
+                        <div class="about-details">
+                            <div class="detail">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h4>Specialization</h4>
+                                    <p>Web Development, AI Integration</p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Digital Space, ID</p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>CS Degree & Self-Taught</p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Hobbies</h4>
+                                    <p>Coding, Coffee, Contemplating</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="badge-text">
-              <div class="badge-title">Always Coding</div>
-              <div class="badge-subtitle">24/7 Developer Mode</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="about-text">
-        <h3 class="about-subtitle">Mengubah Kode menjadi Solusi</h3>
-        <p class="about-desc">
-          Saya Kang Clone, developer full-stack dengan semangat teknologi anak IT dan gaya ala teknologi futuristik yang unik. 
-          Menggabungkan estetika gelap dengan kecepatan dan inovasi dalam tiap proyek.
-        </p>
-        <p class="about-desc">
-          Spesialis dalam membangun aplikasi web modern dengan fokus pada performa, keamanan, dan pengalaman pengguna. 
-          Siap menghadirkan solusi praktis dan elegan dengan teknologi terkini serta antarmuka yang memukau.
-        </p>
-        
-        <div class="about-info">
-          <div class="info-item">
-            <div class="info-label">
-              <i class="fas fa-laptop-code"></i>
-              <span>Spesialisasi</span>
-            </div>
-            <div class="info-value">Web Development, AI Integration</div>
-          </div>
-          <div class="info-item">
-            <div class="info-label">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Lokasi</span>
-            </div>
-            <div class="info-value">Digital Space, Indonesia</div>
-          </div>
-          <div class="info-item">
-            <div class="info-label">
-              <i class="fas fa-graduation-cap"></i>
-              <span>Pendidikan</span>
-            </div>
-            <div class="info-value">Computer Science & Self-Taught</div>
-          </div>
-          <div class="info-item">
-            <div class="info-label">
-              <i class="fas fa-heart"></i>
-              <span>Hobi</span>
-            </div>
-            <div class="info-value">Ngopi, Ngoding, Ngelamun (3N)</div>
-          </div>
-        </div>
-        
-        <div class="about-quote">
-          <div class="quote-icon">
-            <i class="fas fa-quote-left"></i>
-          </div>
-          <div class="quote-text">
-            "Code is like humor. When you have to explain it, it's bad."
-            <div class="quote-author">- Cory House</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <section id="proyek" aria-label="Proyek">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="section-num">03.</span> Proyek Saya
-      </h2>
-      <div class="section-line"></div>
-    </div>
-    
-    <div class="projects-grid" role="list">
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-icon">
-            <i class="fas fa-boxes"></i>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" aria-label="Lihat detail proyek">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="#" class="project-link" aria-label="Lihat kode sumber">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <h3 class="project-title">Sistem Manajemen Inventaris</h3>
-        <p class="project-desc">
-          Aplikasi web real-time dengan dashboard interaktif dan laporan otomatis, 
-          memudahkan pengelolaan stok dan inventaris secara efisien.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">MongoDB</span>
-          <span class="tech-tag">WebSocket</span>
-        </div>
-        <div class="project-footer">
-          <div class="project-date">
-            <i class="far fa-calendar-alt"></i>
-            <span>Jan 2024</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" aria-label="Lihat detail proyek">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="#" class="project-link" aria-label="Lihat kode sumber">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <h3 class="project-title">Portal Belajar Online</h3>
-        <p class="project-desc">
-          Platform edukasi interaktif dengan fitur kuiz, video, dan manajemen materi kursus 
-          untuk pembelajaran jarak jauh yang efektif.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Vue.js</span>
-          <span class="tech-tag">Express</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">Firebase</span>
-        </div>
-        <div class="project-footer">
-          <div class="project-date">
-            <i class="far fa-calendar-alt"></i>
-            <span>Mar 2024</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" aria-label="Lihat detail proyek">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="#" class="project-link" aria-label="Lihat kode sumber">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <h3 class="project-title">Chatbot AI untuk Layanan Pelanggan</h3>
-        <p class="project-desc">
-          Chatbot AI cerdas untuk menjawab pertanyaan pelanggan secara otomatis, 
-          meningkatkan efisiensi layanan dan kepuasan pengguna.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">TensorFlow</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">NLP</span>
-        </div>
-        <div class="project-footer">
-          <div class="project-date">
-            <i class="far fa-calendar-alt"></i>
-            <span>Mei 2024</span>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Proyek tambahan dari link yang diberikan -->
-      <article class="project-card featured" role="listitem">
-        <div class="project-header">
-          <div class="project-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <div class="project-links">
-            <a href="https://kang-clone.github.io/webkami/" target="_blank" class="project-link" aria-label="Lihat proyek langsung">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="#" class="project-link" aria-label="Lihat kode sumber">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <div class="project-badge">
-          <i class="fas fa-star"></i>
-          <span>Proyek Unggulan</span>
-        </div>
-        <h3 class="project-title">WebKami - Modern Agency Website</h3>
-        <p class="project-desc">
-          Website agency modern dengan animasi smooth, desain responsif, dan UI/UX yang menarik. 
-          Dibangun dengan pendekatan mobile-first dan performa tinggi.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">HTML5</span>
-          <span class="tech-tag">CSS3</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">GSAP</span>
-        </div>
-        <div class="project-footer">
-          <div class="project-date">
-            <i class="far fa-calendar-alt"></i>
-            <span>Jun 2024</span>
-          </div>
-          <a href="https://kang-clone.github.io/webkami/" target="_blank" class="project-visit">
-            Kunjungi Website
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </article>
-    </div>
-    
-    <div class="projects-more">
-      <a href="#" class="btn-secondary">
-        <span>Lihat Semua Proyek</span>
-        <i class="fas fa-arrow-down"></i>
-      </a>
-    </div>
-  </section>
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-num">03.</span> Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI Chatbot System</h3>
+                        <p class="project-description">
+                            Intelligent chatbot for customer service with natural language processing 
+                            and automated response system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </article>
 
-  <section id="kemampuan" aria-label="Kemampuan">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="section-num">04.</span> Kemampuan & Teknologi
-      </h2>
-      <div class="section-line"></div>
-    </div>
-    
-    <div class="skills-container">
-      <div class="skills-intro">
-        <h3 class="skills-subtitle">"Kemampuan Tapi BOONG 😅"</h3>
-        <p class="skills-desc">
-          Jangan terlalu serius dengan persentase di bawah ini. Yang penting adalah kemampuan 
-          untuk belajar dan beradaptasi dengan teknologi baru.
-        </p>
-      </div>
-      
-      <div class="skills-grid" role="list">
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">JavaScript</h4>
-            <div class="skill-percent" data-percent="90">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill js-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            ES6+, Async/Await, DOM Manipulation, APIs
-          </div>
-        </div>
-        
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">Python</h4>
-            <div class="skill-percent" data-percent="85">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill py-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            Django, Flask, Data Analysis, Automation
-          </div>
-        </div>
-        
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">React</h4>
-            <div class="skill-percent" data-percent="75">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill react-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            Hooks, Context API, Redux, React Router
-          </div>
-        </div>
-        
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">CSS</h4>
-            <div class="skill-percent" data-percent="80">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill css-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            Flexbox, Grid, Animations, Responsive Design
-          </div>
-        </div>
-        
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">Node.js</h4>
-            <div class="skill-percent" data-percent="70">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill node-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            Express, REST APIs, Authentication, WebSockets
-          </div>
-        </div>
-        
-        <div class="skill" role="listitem">
-          <div class="skill-header">
-            <h4 class="skill-title">AI/ML</h4>
-            <div class="skill-percent" data-percent="65">0%</div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill ai-fill"></div>
-            <div class="progress-glow"></div>
-          </div>
-          <div class="skill-desc">
-            TensorFlow, NLP, Computer Vision, Chatbots
-          </div>
-        </div>
-      </div>
-      
-      <div class="skills-tech">
-        <h4 class="tech-title">Teknologi Lain yang Saya Gunakan</h4>
-        <div class="tech-tags">
-          <span class="tech-tag-sm">Git</span>
-          <span class="tech-tag-sm">Docker</span>
-          <span class="tech-tag-sm">MongoDB</span>
-          <span class="tech-tag-sm">PostgreSQL</span>
-          <span class="tech-tag-sm">Firebase</span>
-          <span class="tech-tag-sm">AWS</span>
-          <span class="tech-tag-sm">GraphQL</span>
-          <span class="tech-tag-sm">TypeScript</span>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured online store with real-time inventory, payment processing, 
+                            and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </article>
 
-  <section id="kontak" aria-label="Kontak">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="section-num">05.</span> Hubungi Saya
-      </h2>
-      <div class="section-line"></div>
-    </div>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3 class="contact-subtitle">Mari Berkolaborasi</h3>
-        <p class="contact-desc">
-          Ingin bekerja sama atau punya pertanyaan? Jangan ragu hubungi saya. 
-          Saya selalu terbuka untuk diskusi tentang proyek baru, peluang kolaborasi, 
-          atau sekadar ngobrol tentang teknologi.
-        </p>
-        
-        <div class="contact-methods">
-          <a href="mailto:kangclone0101@gmail.com" class="contact-method">
-            <div class="method-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="method-details">
-              <div class="method-label">Email</div>
-              <div class="method-value">kangclone0101@gmail.com</div>
-            </div>
-          </a>
-          
-          <a href="https://wa.me/6281342292569" target="_blank" rel="noopener" class="contact-method">
-            <div class="method-icon">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="method-details">
-              <div class="method-label">WhatsApp</div>
-              <div class="method-value">+62 813 4229 2569</div>
-            </div>
-          </a>
-          
-          <div class="contact-method">
-            <div class="method-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="method-details">
-              <div class="method-label">Lokasi</div>
-              <div class="method-value">Digital Space, Indonesia</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact-hobby">
-          <h4>Hobi Saya (3N)</h4>
-          <div class="hobby-items">
-            <div class="hobby-item">
-              <i class="fas fa-coffee"></i>
-              <span>Ngopi</span>
-            </div>
-            <div class="hobby-item">
-              <i class="fas fa-code"></i>
-              <span>Ngoding</span>
-            </div>
-            <div class="hobby-item">
-              <i class="fas fa-cloud"></i>
-              <span>Ngelamun</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact-social">
-          <h4>Temui Saya di</h4>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="contact-form-container">
-        <h3 class="form-title">Kirim Pesan Langsung</h3>
-        <p class="form-desc">
-          Silakan isi nama dan pesanmu di bawah ini, saya akan membaca setiap pesan yang masuk 😊
-        </p>
-        
-        <form id="messageForm" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nama</label>
-            <div class="input-container">
-              <i class="fas fa-user input-icon"></i>
-              <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required />
-              <div class="input-underline"></div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <div class="input-container">
-              <i class="fas fa-envelope input-icon"></i>
-              <input type="email" id="email" name="email" placeholder="Masukkan email kamu" required />
-              <div class="input-underline"></div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Pesan</label>
-            <div class="input-container">
-              <i class="fas fa-comment-alt input-icon"></i>
-              <textarea id="message" name="message" placeholder="Tulis pesan kamu di sini..." required></textarea>
-              <div class="input-underline"></div>
-            </div>
-          </div>
-          
-          <button type="submit" class="btn-primary glitch">
-            <span class="glitch-text">Kirim Pesan</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-    
-    <div class="messages-container">
-      <h4 class="messages-title">Pesan dari Pengunjung</h4>
-      <div class="messages-list" id="messagesList">
-        <!-- Pesan akan ditampilkan di sini -->
-        <div class="message-empty">
-          <i class="fas fa-inbox"></i>
-          <p>Belum ada pesan. Jadilah yang pertama!</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Real-time data visualization platform with interactive charts and 
+                            customizable reporting tools.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                    </article>
 
-</main>
+                    <!-- Project 4 - Featured -->
+                    <article class="project-card featured">
+                        <div class="project-badge">Featured</div>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kang-clone.github.io/webkami/" target="_blank" 
+                                   class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">WebKami Agency</h3>
+                        <p class="project-description">
+                            Modern agency website with smooth animations, responsive design, 
+                            and optimized performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                        <a href="https://kang-clone.github.io/webkami/" target="_blank" 
+                           class="project-visit">Visit Live Site →</a>
+                    </article>
+                </div>
+                <div class="projects-more">
+                    <a href="#" class="btn btn-outline">View All Projects</a>
+                </div>
+            </div>
+        </section>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-logo">
-      <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
-    </div>
-    
-    <div class="footer-quote">
-      "Code never lies, comments sometimes do." - Ron Jeffries
-    </div>
-    
-    <div class="footer-links">
-      <a href="#beranda">Beranda</a>
-      <a href="#tentang-saya">Tentang</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#kemampuan">Kemampuan</a>
-      <a href="#kontak">Kontak</a>
-    </div>
-    
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        &copy; 2024 Kang Clone. Dibangun dengan <i class="fas fa-heart"></i> dan <i class="fas fa-code"></i>.
-      </div>
-      <div class="footer-stats">
-        <span class="stat"><i class="fas fa-eye"></i> <span id="visitorCount">0</span> Pengunjung</span>
-        <span class="stat"><i class="fas fa-clock"></i> Terakhir update: <span id="lastUpdate">Hari ini</span></span>
-      </div>
-    </div>
-  </div>
-</footer>
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-num">04.</span> Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-content">
+                    <p class="skills-intro">
+                        "Skills may vary, but the ability to learn and adapt is constant. 
+                        These percentages are just for show! 😉"
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>JavaScript</h4>
+                                <span class="skill-percent" data-percent="90">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress js-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>Python</h4>
+                                <span class="skill-percent" data-percent="85">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress py-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>React</h4>
+                                <span class="skill-percent" data-percent="80">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress react-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>Node.js</h4>
+                                <span class="skill-percent" data-percent="75">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress node-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>UI/UX Design</h4>
+                                <span class="skill-percent" data-percent="70">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress design-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>Cloud & DevOps</h4>
+                                <span class="skill-percent" data-percent="65">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress devops-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Terminal Toggle Button -->
-<button class="terminal-toggle" aria-label="Toggle terminal">
-  <i class="fas fa-terminal"></i>
-</button>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-num">05.</span> Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Work Together</h3>
+                        <p>
+                            I'm currently available for freelance work and full-time opportunities. 
+                            Whether you have a project in mind or just want to connect, feel free to reach out!
+                        </p>
+                        <div class="contact-methods">
+                            <a href="mailto:kangclone0101@gmail.com" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>kangclone0101@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/6281342292569" target="_blank" class="contact-method">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>+62 813 4229 2569</p>
+                                </div>
+                            </a>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h4>Connect with me</h4>
+                            <div class="social-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="messageForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- Script -->
-<script>
-  // ==================== FUNGSI UMUM ====================
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio Kang Clone loaded');
-    
-    // Simulasi pengunjung
-    const visitorCount = document.getElementById('visitorCount');
-    if (visitorCount) {
-      const randomVisitors = Math.floor(Math.random() * 500) + 100;
-      animateCounter(visitorCount, randomVisitors, 2000);
-    }
-    
-    // Animate counter untuk stats
-    function animateCounter(element, target, duration) {
-      const start = 0;
-      const increment = target / (duration / 16);
-      let current = start;
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        element.textContent = Math.floor(current);
-      }, 16);
-    }
-    
-    // Animate stat numbers in hero
-    const statNumbers = document.querySelectorAll('.stat-number');
-    statNumbers.forEach(stat => {
-      const target = parseInt(stat.getAttribute('data-count'));
-      animateCounter(stat, target, 1500);
-    });
-    
-    // Animate skill percentages
-    const skillPercents = document.querySelectorAll('.skill-percent');
-    skillPercents.forEach(skill => {
-      const target = parseInt(skill.getAttribute('data-percent'));
-      animateCounter(skill, target, 2000);
-    });
-    
-    // Progress bar animasi
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const bars = [
-            { selector: '.js-fill', width: '90%' },
-            { selector: '.py-fill', width: '85%' },
-            { selector: '.react-fill', width: '75%' },
-            { selector: '.css-fill', width: '80%' },
-            { selector: '.node-fill', width: '70%' },
-            { selector: '.ai-fill', width: '65%' }
-          ];
-          
-          bars.forEach(bar => {
-            const el = document.querySelector(bar.selector);
-            if(el) {
-              setTimeout(() => {
-                el.style.width = bar.width;
-              }, 300);
-            }
-          });
-          
-          obs.disconnect();
-        }
-      });
-    }, {threshold: 0.5});
-    
-    const skillsSection = document.getElementById('kemampuan');
-    if (skillsSection) observer.observe(skillsSection);
-    
-    // ==================== FITUR KIRIM PESAN ====================
-    const form = document.getElementById('messageForm');
-    const messagesList = document.getElementById('messagesList');
-    const saved = JSON.parse(localStorage.getItem('visitorMessages')) || [];
-    
-    // Load saved messages
-    if (saved.length > 0) {
-      messagesList.innerHTML = '';
-      saved.forEach(msg => addMessage(msg.name, msg.text, msg.email));
-    }
-    
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const text = form.message.value.trim();
-      
-      if(!name || !email || !text) {
-        showNotification('Harap isi semua field.', 'error');
-        return;
-      }
-      
-      if (!validateEmail(email)) {
-        showNotification('Format email tidak valid.', 'error');
-        return;
-      }
-      
-      addMessage(name, text, email);
-      saved.push({name, email, text, date: new Date().toLocaleDateString('id-ID')});
-      localStorage.setItem('visitorMessages', JSON.stringify(saved));
-      
-      showNotification('Pesan berhasil dikirim!', 'success');
-      form.reset();
-    });
-    
-    function addMessage(name, text, email) {
-      if (messagesList.querySelector('.message-empty')) {
-        messagesList.innerHTML = '';
-      }
-      
-      const messageEl = document.createElement('div');
-      messageEl.className = 'message-item';
-      messageEl.innerHTML = `
-        <div class="message-header">
-          <div class="message-avatar">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="message-info">
-            <div class="message-name">${name}</div>
-            <div class="message-email">${email}</div>
-          </div>
-          <div class="message-date">Baru saja</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">[</span>KANG_CLONE<span class="logo-bracket">]</span>
+                </div>
+                <p class="footer-quote">
+                    "Code is like humor. When you have to explain it, it's bad."
+                </p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Kang Clone. All rights reserved.</p>
+                    <div class="footer-stats">
+                        <span><i class="fas fa-eye"></i> <span id="visitorCount">0</span> visitors</span>
+                        <span><i class="fas fa-code"></i> Built with passion</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="message-content">${text}</div>
-      `;
-      
-      messagesList.prepend(messageEl);
-    }
-    
-    function validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
-    }
-    
-    function showNotification(message, type) {
-      const notification = document.createElement('div');
-      notification.className = `notification ${type}`;
-      notification.innerHTML = `
-        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-        <span>${message}</span>
-      `;
-      
-      document.body.appendChild(notification);
-      
-      setTimeout(() => {
-        notification.classList.add('show');
-      }, 10);
-      
-      setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-          if (notification.parentNode) {
-            notification.parentNode.removeChild(notification);
-          }
-        }, 300);
-      }, 3000);
-    }
-    
-    // ==================== DARK/LIGHT MODE TOGGLE ====================
-    const toggleBtn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(currentTheme);
-    
-    toggleBtn.addEventListener('click', () => {
-      const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-      setTheme(theme);
-    });
-    
-    function setTheme(theme){
-      root.dataset.theme = theme;
-      const icon = toggleBtn.querySelector('i');
-      icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-      localStorage.setItem('theme', theme);
-    }
-    
-    // ==================== TERMINAL TOGGLE ====================
-    const terminalToggle = document.querySelector('.terminal-toggle');
-    const terminalWindow = document.querySelector('.terminal-window');
-    
-    if (terminalToggle && terminalWindow) {
-      terminalToggle.addEventListener('click', () => {
-        terminalWindow.classList.toggle('show');
-        terminalToggle.classList.toggle('active');
-      });
-    }
-    
-    // ==================== MENU MOBILE ====================
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        menuToggle.classList.toggle('active');
-      });
-    }
-    
-    // ==================== SCROLL ANIMATIONS ====================
-    // Animasi saat scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observerFade = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-    
-    // Observe elements untuk fade in
-    document.querySelectorAll('.project-card, .skill, .contact-method').forEach(el => {
-      observerFade.observe(el);
-    });
-    
-    // ==================== TYPING EFFECT ====================
-    // Simulasi efek typing di terminal
-    const terminalLines = document.querySelectorAll('.terminal-line');
-    if (terminalLines.length > 0) {
-      let lineIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let isEnd = false;
-      
-      function typeLine() {
-        const currentLine = terminalLines[lineIndex];
-        const text = currentLine.textContent.replace('█', '');
-        
-        if (!isDeleting && charIndex <= text.length) {
-          currentLine.textContent = text.substring(0, charIndex) + '█';
-          charIndex++;
-          setTimeout(typeLine, charIndex === text.length ? 1000 : 50);
-        } else if (!isDeleting && charIndex > text.length) {
-          if (lineIndex === terminalLines.length - 1) {
-            isEnd = true;
-            // Blinking cursor
-            setInterval(() => {
-              const cursor = currentLine.textContent.includes('█') 
-                ? currentLine.textContent.replace('█', '')
-                : currentLine.textContent + '█';
-              currentLine.textContent = cursor;
-            }, 500);
-            return;
-          }
-          isDeleting = true;
-          setTimeout(typeLine, 1000);
-        } else if (isDeleting && charIndex > 0) {
-          charIndex--;
-          currentLine.textContent = text.substring(0, charIndex) + '█';
-          setTimeout(typeLine, 30);
-        } else {
-          isDeleting = false;
-          lineIndex++;
-          setTimeout(typeLine, 500);
-        }
-      }
-      
-      // Start typing effect after page load
-      setTimeout(typeLine, 1000);
-    }
-    
-    // ==================== GLITCH EFFECT ====================
-    const glitchButtons = document.querySelectorAll('.glitch');
-    glitchButtons.forEach(button => {
-      button.addEventListener('mouseenter', () => {
-        button.classList.add('glitch-active');
-        setTimeout(() => {
-          button.classList.remove('glitch-active');
-        }, 500);
-      });
-    });
-    
-    // ==================== BACKGROUND ANIMATIONS ====================
-    // Matrix rain effect
-    const matrixBg = document.querySelector('.matrix-bg');
-    if (matrixBg) {
-      const chars = "01";
-      const columns = Math.floor(window.innerWidth / 20);
-      
-      for (let i = 0; i < columns; i++) {
-        const column = document.createElement('div');
-        column.className = 'matrix-column';
-        column.style.left = `${i * 20}px`;
-        column.style.animationDelay = `${Math.random() * 5}s`;
-        matrixBg.appendChild(column);
-        
-        // Add random characters
-        const charCount = Math.floor(Math.random() * 15) + 10;
-        for (let j = 0; j < charCount; j++) {
-          const char = document.createElement('span');
-          char.textContent = chars[Math.floor(Math.random() * chars.length)];
-          char.style.animationDelay = `${Math.random() * 5}s`;
-          column.appendChild(char);
-        }
-      }
-    }
-  });
-  
-  // ==================== SCROLL SMOOTH ====================
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
-        
-        // Close mobile menu if open
-        const navLinks = document.querySelector('.nav-links');
-        const menuToggle = document.querySelector('.menu-toggle');
-        if (navLinks && navLinks.classList.contains('show')) {
-          navLinks.classList.remove('show');
-          menuToggle.classList.remove('active');
-        }
-      }
-    });
-  });
-</script>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
